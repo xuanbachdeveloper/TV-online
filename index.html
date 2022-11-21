@@ -39,6 +39,11 @@
     }
 
 
+    $(document.body).on('change',"#selectChannel",function (e) {
+   var optVal= $("#selectChannel option:selected").val();
+   console.log(optVal);
+   window.location.replace("?channel="+optVal); 
+})
 
     $(function () {
       var query = window.location.search.substring(1);
